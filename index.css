@@ -1,0 +1,207 @@
+/* fonts
+font-family: 'Rubik 80s Fade', cursive;
+font-family: 'Rubik Vinyl', cursive;
+
+*/
+
+body {
+  margin: 0px; 
+  padding: 0px; 
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0px; 
+  padding: 0px; 
+}
+
+
+.container {
+  display: grid; 
+  height: 100vh; 
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;  
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer"; 
+  grid-gap: 10px; 
+}
+
+img { 
+   height: 80px;
+   width: 80px;  
+   border-radius: 5rem; 
+   
+}
+
+nav {
+  background-color: rgb(75, 68, 69); 
+  grid-area: nav; 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center; 
+  padding: 30px; 
+}
+
+nav .logo {
+  margin-left: 50px; 
+}
+
+nav img {
+  height: 150px;
+  width: 150px;  
+  border-radius: 5rem; 
+}
+
+.links {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.links li {
+  margin-left: 3rem;
+}
+
+.links li a {
+  text-decoration: none; 
+  font-family: 'Rubik Vinyl', cursive;
+  font-size: 21px; 
+  font-style: sans-serif; 
+  color: orangered; 
+  cursor: pointer; 
+  transition: .4s ease; 
+}
+
+.links li a:hover {
+  color: #00beef; 
+}
+
+main {
+  background-color: orangered; 
+  grid-area: main; 
+  padding: 30px; 
+  color: linen; 
+  font-family: 'Rubik 80s Fade', cursive;
+} 
+
+main .title, .sidebar .title {
+  font-size: 48px; 
+  margin-bottom: 5px; 
+}
+
+main p, .sidebar p {
+  letter-spacing: 1px; 
+  margin-bottom: 25px; 
+}
+
+main .pictureflex {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px; 
+}
+
+.sidebar {
+  background-color: rgb(62, 64, 62); 
+  grid-area: sidebar; 
+  color: linen; 
+  padding: 20px; 
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: 'Rubik Vinyl', cursive;
+  display: inline-block; 
+}
+
+.sidebar .pictureflex {
+  margin-bottom: 20px; 
+}
+
+#content {
+  padding: 10px;  
+  font-family: 'Rubik 80s Fade', cursive;
+  text-align: center; 
+}
+
+#content .fa-brands {
+  font-size: 28px; 
+}
+
+
+.content1 {
+  background-color: #00beef;
+  grid-area: content1;
+}
+
+.content2 {
+  background-color: orangered; 
+  grid-area: content2; 
+}
+
+.content3{
+  background-color: #00beef; 
+  grid-area: content3; 
+}
+
+footer {
+  background-color: lightslategray; 
+  grid-area: footer; 
+  padding: 20px; 
+}
+
+footer .drawings {
+  font-size: 25px; 
+  display: flex; 
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer i {
+  padding-left: 2rem;
+  margin-bottom: 15px; 
+}
+
+footer p {
+  margin: 0px;
+  font-size: 14px; 
+  text-align: right; 
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    height: 100vh; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1.2fr 1fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr; 
+    grid-template-areas: 
+    "nav"
+    "sidebar"
+    "main"
+    "content1"
+    "content2"
+    "content3"
+    "footer"
+  }
+
+  nav {
+    display: flex; 
+    flex-direction: column;
+  }
+
+  nav img, nav ul {
+  margin-right: 80px; 
+  margin-bottom: 30px;
+  }
+
+}
+
+
+
+
+
